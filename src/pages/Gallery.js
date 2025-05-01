@@ -3,21 +3,22 @@ import { Link } from 'react-router-dom';
 import './Gallery.css';
 
 const leftImages = [
-  { src: '/assets/1.jpeg', caption: 'That first smile 💕' },
-  { src: '/assets/5.jpeg', caption: 'My favorite laugh.' },
-  { src: '/assets/3.jpeg', caption: 'This day >>>>' },
+  { src: `${process.env.PUBLIC_URL}/assets/1.jpeg`, caption: 'That first smile 💕' },
+  { src: `${process.env.PUBLIC_URL}/assets/5.jpeg`, caption: 'My favorite laugh.' },
+  { src: `${process.env.PUBLIC_URL}/assets/3.jpeg`, caption: 'This day >>>>' },
 ];
 
 const rightImages = [
-  { src: '/assets/4.jpeg', caption: 'Caught us being senti.' },
-  { src: '/assets/2.jpeg', caption: 'You. Me. Always.' },
-  { src: '/assets/6.jpeg', caption: 'Forever feels like this.' },
+  { src: `${process.env.PUBLIC_URL}/assets/4.jpeg`, caption: 'Caught us being senti.' },
+  { src: `${process.env.PUBLIC_URL}/assets/2.jpeg`, caption: 'You. Me. Always.' },
+  { src: `${process.env.PUBLIC_URL}/assets/6.jpeg`, caption: 'Forever feels like this.' },
 ];
 
 export default function Gallery() {
   return (
     <div className="gallery-container">
       {/* Background music */}
+      {/* <audio src={`${process.env.PUBLIC_URL}/luther.mp3`} autoPlay loop /> */}
 
       <h1>Our Favorite Moments</h1>
 
@@ -40,9 +41,8 @@ export default function Gallery() {
             loop
             muted
             playsInline
-            controls={false} // remove this if you want visible player
           >
-            <source src="/assets/US.mp4" type="video/mp4" />
+            <source src={`${process.env.PUBLIC_URL}/assets/us.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

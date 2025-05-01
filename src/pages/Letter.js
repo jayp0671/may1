@@ -6,7 +6,7 @@ export default function Letter() {
   return (
     <div className="letter-container">
       <div className="letter-card">
-        {/* <audio src="/luther.mp3" autoPlay loop /> */}
+        <audio src="/luther.mp3" autoPlay loop />
         <h2>Just You & Me</h2>
         <p>
           Today’s one of those random little holidays my love! Happy National Lovers Day and Happy Couple Appreciation Day!
